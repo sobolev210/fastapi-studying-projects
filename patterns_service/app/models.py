@@ -28,6 +28,7 @@ class UseCase(Base):
     __tablename__ = "use_cases"
     id = Column(Integer, primary_key=True)
     description = Column(Text)
+    upvotes = Column(Integer, nullable=True, default=0)
     pattern_id = Column(Integer, ForeignKey("patterns.id"))
 
     pattern = relationship("Pattern", back_populates="use_cases")

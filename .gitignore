@@ -130,4 +130,4 @@ dmypy.json
 
 .idea/
 
-/relational_databases_project/patterns_app.db
+/patterns_service/patterns_app.db
