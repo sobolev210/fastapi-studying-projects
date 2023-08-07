@@ -17,6 +17,7 @@ class Pattern(Base):
     __tablename__ = "patterns"
     id = Column(Integer, primary_key=True)
     name = Column(String, unique=True, nullable=False)
+    intent = Column(Text, nullable=False)
     description = Column(Text)
     pattern_type_id = Column(Integer, ForeignKey("pattern_types.id"))
 

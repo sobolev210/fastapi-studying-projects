@@ -2,3 +2,4 @@ fastapi~=0.96.0
 uvicorn~=0.22.0
 SQLAlchemy~=2.0.15
 alembic~=1.11.1
+psycopg2~=2.9.7
