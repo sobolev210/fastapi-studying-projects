@@ -18,6 +18,7 @@ class PatternType(PatternTypeBase):
 
 class PatternBase(BaseModel):
     name: str
+    intent: str
     description: str | None = None
 
 

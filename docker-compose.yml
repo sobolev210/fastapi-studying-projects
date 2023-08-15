@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  patterns_service:
+    build: patterns_service
+    depends_on:
+      - postgresql
+    ports:
+      - 8000:8000
+
+  postgresql:
+      image: postgres
+      volumes:
+        - patterns_service_db:/var/lib/postgresql/data
+      environment:
+        POSTGRES_USER: "patterns_admin"
+        POSTGRES_PASSWORD: "secret"
+        POSTGRES_DB: "patterns"
+
+
+volumes:
+  patterns_service_db:
